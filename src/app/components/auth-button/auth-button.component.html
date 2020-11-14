@@ -1,0 +1,9 @@
+<ng-container *ngIf="auth.loggedIn; else loggedOut">
+    <button (click)="auth.logout()" class="btn btn-outline-danger">
+          Salir
+        </button>
+</ng-container>
+
+<ng-template #loggedOut>
+    <button (click)="auth.login()" class="btn btn-outline-success">Ingresar</button>
+</ng-template>
